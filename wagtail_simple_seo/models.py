@@ -1,4 +1,5 @@
 from django.db import models
+from wagtail.models import Site
 from wagtail.admin.panels import FieldPanel, MultiFieldPanel
 from wagtail.contrib.settings.models import BaseSiteSetting, register_setting
 from wagtail.images import get_image_model_string
@@ -43,8 +44,16 @@ class SeoMixin(models.Model):
 
 @register_setting(icon="search")
 class SEOSettings(BaseSiteSetting):
+    site = models.OneToOneField(
+        Site,
+        on_delete=models.CASCADE,
+        related_name="simple_seo_settings",
+        editable=False,
+    )
+
     default_description = models.TextField(
-        blank=True, verbose_name="Default meta description",
+        blank=True,
+        verbose_name="Default meta description",
         help_text="Used when a page does not provide its own meta description.",
     )
     default_social_image = models.ForeignKey(

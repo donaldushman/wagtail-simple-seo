@@ -48,6 +48,7 @@ class Migration(migrations.Migration):
                     models.OneToOneField(
                         editable=False,
                         on_delete=django.db.models.deletion.CASCADE,
+                        related_name="simple_seo_settings",
                         to="wagtailcore.site",
                     ),
                 ),
