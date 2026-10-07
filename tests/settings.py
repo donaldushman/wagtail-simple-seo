@@ -33,5 +33,13 @@ DATABASES = {
 
 ROOT_URLCONF = "tests.urls"
 MIDDLEWARE = []
+TEMPLATES = [
+    {
+        "BACKEND": "django.template.backends.django.DjangoTemplates",
+        "APP_DIRS": True,
+        "OPTIONS": {},
+    },
+]
 STATIC_URL = "/static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+WAGTAILADMIN_BASE_URL = "http://localhost"
