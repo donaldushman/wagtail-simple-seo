@@ -14,6 +14,12 @@ dependencies = [
 ]
 authors = [{ name = "Donald Ushman" }]
 
+[project.optional-dependencies]
+test = [
+    "pytest>=8",
+    "pytest-django>=4.8",
+]
+
 [project.urls]
 Repository = "https://github.com/donaldushman/wagtail-simple-seo"
 
