@@ -12,7 +12,19 @@ dependencies = [
     "Django>=5.2,<6.0",
     "Wagtail>=7.2,<9.0",
 ]
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [{ name = "Donald Ushman" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Framework :: Django",
+    "Framework :: Wagtail",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
 
 [project.optional-dependencies]
 test = [
