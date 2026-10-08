@@ -9,7 +9,7 @@ description = "Lightweight SEO metadata and social sharing support for Wagtail."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "Django>=5.2,<6.0",
+    "Django>=5.2,<6.2",
     "Wagtail>=7.2,<9.0",
 ]
 license = "MIT"

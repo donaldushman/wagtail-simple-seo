@@ -22,8 +22,10 @@ It is designed for sites that need standard page metadata and sensible fallbacks
 ## Requirements
 
 - Python 3.10+
-- Django 5.2+
-- Wagtail 7.2+
+- Django 5.2, 6.0, or 6.1 (including 6.1.2)
+- Wagtail 7.2 through 8.x
+
+Django 6.x requires Python 3.12+. For Django 6.1, use Wagtail 8.0+.
 
 ## Installation
 
