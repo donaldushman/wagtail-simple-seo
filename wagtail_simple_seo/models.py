@@ -10,9 +10,16 @@ class SeoMixin(models.Model):
         help_text="Leave blank to use the page's URL.",
     )
     og_image = models.ForeignKey(
-        get_image_model_string(), verbose_name="Preview image",
-        blank=True, null=True, on_delete=models.SET_NULL, related_name="+",
-        help_text="Shown when linking to this page on social media.",
+        get_image_model_string(),
+        verbose_name="Preview image",
+        blank=True,
+        null=True,
+        on_delete=models.SET_NULL,
+        related_name="+",
+        help_text=(
+            "Shown when linking to this page on social media. "
+            "If blank, may show an image from the page, or the default from Settings > SEO."
+        ),
     )
     noindex = models.BooleanField(
         default=False, verbose_name="Hide from search engines",
